@@ -4,7 +4,7 @@ class CreateLessons < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :description
       t.integer :xp_worth
-      t.array :order
+      t.string :order, array: true, default: []
 
       t.timestamps
     end
