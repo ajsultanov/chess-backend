@@ -3,11 +3,19 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    #byebug
     if @user.valid?
       render json: @user, status: :accepted
     else
-      render json: { errors: @user.errors.full_messages }, status: :not_acceptable
+      render json: { errors: "Sign up failed!" }, status: :not_acceptable
+    end
+  end
+
+  def login
+    @user = User.find_by(username: params[:username])
+    if @user && @user.authenticate(params[:password])
+      render json: @user
+    else
+      render json: { errors: "Login failed!" }, status: :unauthorized
     end
   end
 
