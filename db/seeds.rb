@@ -1,20 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create([
-  {name: 'adam', username: 'ad1', xp: 0},
-  {name: 'bob', username: 'bo2', xp: 0},
-])
+User.create(id: 1, name: "adam", username: "ad1", password: "123", xp: 0)
+User.create(id: 2, name: "bob", username: "b02", password: "123", xp: 0)
 
-lessons = Lesson.create(
-  {title: 'the board', description: 'the chessboard', xp_worth: 10, order: ['1', '2', '3']}
-)
+Lesson.create(id: 1, title: "the board 1", description: "the chess board", order: ['1', '2', '3'])
+Lesson.create(id: 2, title: "the board 2", description: "the grid", order: ['3', '4', '5'])
 
-userLessons = UserLesson.create(
-  {user_id: 1, lesson_id: 1, completed: false}
-)
+Puzzle.create(id: 1, title: "intro board", description: "first puzzle", positions: ["rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"], moves: "", lesson_id: 1)

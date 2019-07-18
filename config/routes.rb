@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :slides
-  resources :puzzles
-  resources :lessons
-  resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post  '/users',       to: 'users#create'
+  get   '/users/:id',   to: 'users#show',   as: 'user'
+  get   '/lessons',     to: 'lessons#index'
+  get   '/lessons/:id', to: 'lessons#show', as: 'lesson'
+  patch '/lessons/:id', to: 'lessons#update'
 end
