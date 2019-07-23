@@ -4,4 +4,5 @@ class User < ApplicationRecord
   has_secure_password
 
   has_many :user_lessons
+  has_many :lessons, through: :user_lessons
 end

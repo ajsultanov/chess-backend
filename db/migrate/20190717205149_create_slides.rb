@@ -6,6 +6,7 @@ class CreateSlides < ActiveRecord::Migration[5.2]
       t.text :content
       t.string :image
       t.integer :lesson_id
+      t.integer :sort_order
 
       t.timestamps
     end

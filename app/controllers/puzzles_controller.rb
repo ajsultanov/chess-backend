@@ -1,5 +1,6 @@
 class PuzzlesController < ApplicationController
-  def show
-
+  def index
+    @puzzles = Puzzle.where('lesson_id = ?', params[:id].to_i)
+    render json: @puzzles
   end
 end

@@ -4,6 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :username
       t.integer :xp
       t.string :password_digest
+      t.integer :current_lesson
 
       t.timestamps
     end

@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_07_17_205251) do
     t.string "positions", default: [], array: true
     t.string "moves"
     t.integer "lesson_id"
+    t.integer "sort_order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_07_17_205251) do
     t.text "content"
     t.string "image"
     t.integer "lesson_id"
+    t.integer "sort_order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -56,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_07_17_205251) do
     t.string "username"
     t.integer "xp"
     t.string "password_digest"
+    t.integer "current_lesson"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
