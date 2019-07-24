@@ -1,5 +1,5 @@
 class SlideSerializer < ActiveModel::Serializer
 
-  attributes :id, :title, :description, :content, :image, :lesson_id, :sort_order
+  attributes :id, :title, :description, :content, :image, :lesson_id, :sort_order, :style
 
 end

@@ -7,7 +7,7 @@ class CreatePuzzles < ActiveRecord::Migration[5.2]
       t.string :moves
       t.integer :lesson_id
       t.integer :sort_order
-      t.string :type
+      t.string :style
 
       t.timestamps
     end
