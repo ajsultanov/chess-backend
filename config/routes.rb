@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   patch '/lessons/:id',         to: 'lessons#update'
   get   '/lessons/:id/puzzles', to: 'puzzles#index'
   get   '/lessons/:id/slides',  to: 'slides#index'
+  patch '/user_lessons/:id',    to: 'user_lessons#update'
 end

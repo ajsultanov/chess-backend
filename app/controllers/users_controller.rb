@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:show, :update]
+  before_action :find_user, only: [:show, :update, :complete_lesson]
 
   def create
     @user = User.create(user_params)
@@ -26,14 +26,15 @@ class UsersController < ApplicationController
 
   def update
     if params[:xp]
-      #byebug
       @user.xp += params[:xp]
       if @user.current_lesson < @user.user_lessons.length
         @user.current_lesson = params[:current_lesson] + 1
       end
+
     elsif params[:current_lesson]
       @user.current_lesson = params[:current_lesson]
     end
+
     if @user.save
       render json: @user
     else
