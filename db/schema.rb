@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_07_17_205251) do
     t.string "title"
     t.string "description"
     t.string "positions", default: [], array: true
-    t.string "moves", default: [], array: true
+    t.string "moves"
     t.integer "lesson_id"
     t.integer "sort_order"
     t.string "style"
