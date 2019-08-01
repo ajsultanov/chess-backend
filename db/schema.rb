@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_07_17_205251) do
     t.string "positions", default: [], array: true
     t.string "moves", default: [], array: true
     t.integer "lesson_id"
+    t.text "text"
     t.integer "sort_order"
     t.string "style"
     t.datetime "created_at", null: false
